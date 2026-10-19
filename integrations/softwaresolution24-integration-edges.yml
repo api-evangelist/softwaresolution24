@@ -1,0 +1,18 @@
+generated: '2026-10-19'
+method: none
+source:
+- https://zapier.com/apps/softwaresolution24/integrations
+- https://zapier.com/apps/software-solution-24/integrations
+- https://n8n.io/integrations/softwaresolution24/
+- https://composio.dev/toolkits/softwaresolution24
+- https://monid.ai/tools/softwaresolution24
+checked:
+- https://composio.dev/toolkits/softwaresolution24
+- https://monid.ai/tools/softwaresolution24
+- https://n8n.io/integrations/softwaresolution24/
+- https://zapier.com/apps/software-solution-24/integrations
+- https://zapier.com/apps/softwaresolution24/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
