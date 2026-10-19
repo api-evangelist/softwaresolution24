@@ -3,13 +3,14 @@ method: derived
 source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
 generator: derive-hosts.py
 summary:
-  hosts: 3
+  hosts: 4
   own: 3
   other_domain: 0
-  platform: 0
+  platform: 1
   roles:
   - api
   - docs
+  - source
   - website
 hosts:
 - host: api.softwaresolution24.com
@@ -22,26 +23,43 @@ hosts:
   relation: own
 - host: docs.softwaresolution24.com
   found_by:
+  - pointer
   - probed
   - site-links
   - docs-index
   - contract-discovery
   - well-known
-  types: []
+  types:
+  - Documentation
   serves:
   - docs
   registrable_domain: softwaresolution24.com
   role: docs
   relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
 - host: softwaresolution24.com
   found_by:
   - pointer
   - probed
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
+  - Blog
   - Website
-  serves: []
+  serves:
+  - cdn
+  - hosting
+  platform: shopify.com
+  vendor: cloudflare
   registrable_domain: softwaresolution24.com
   role: website
   relation: own
